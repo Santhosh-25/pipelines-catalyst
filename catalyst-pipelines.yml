@@ -17,7 +17,7 @@ jobs:
       - pwd
       - npm i -g zcatalyst-cli@latest
       - catalyst --version
-      - catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.f7c1029d8034ad5a819592479ee58de7.41199573461f2037ea672999cc82e0e8
+      - catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8
 
   AppsailDeployment:
     runner: Machine
@@ -27,7 +27,7 @@ jobs:
       - pwd
       - npm i -g zcatalyst-cli@latest
       - catalyst --version
-      - catalyst deploy --project 27833000000008058 --org 862569740 --only appsail --token m_1004.f7c1029d8034ad5a819592479ee58de7.41199573461f2037ea672999cc82e0e8
+      - catalyst deploy --project 27833000000008058 --org 862569740 --only appsail --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8
 stages:
   - name: Deployment
     jobs:
