@@ -6,8 +6,8 @@ images:
   image:
     image: node:20
     auth:
-      username: << env.USER_NAME >>
-      password: << env.PASSWORD >>
+       username: santhosh270
+       password: Catalyst@test123
 jobs:
   Deploy_Client_Functions:
     runner: Machine
