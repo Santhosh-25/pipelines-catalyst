@@ -17,6 +17,7 @@ jobs:
       - pwd
       - npm i -g zcatalyst-cli@latest
       - catalyst --version
+      - echo `catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8`
       - catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8
 
   AppsailDeployment:
