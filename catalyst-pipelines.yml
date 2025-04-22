@@ -9,24 +9,6 @@ images:
        username: santhosh270
        password: Catalyst@test123
 jobs:
-  Deploy_Client_Functions:
-    runner: Machine
-    image: image
-    steps:
-      - ls
-      - pwd
-      - npm install sharp
-      - npm i -g zcatalyst-cli@beta
-      - catalyst --version
-  Deployment_Approval:
-    type: approval
-    specification:
-      reviewers:
-        - santhosh.mahendiran+us@zohotest.com
-      message: |-
-        Hi,
-
-        Kindly approve the latest build.
   Deployment:
     runner: Machine
     image: image
@@ -36,31 +18,7 @@ jobs:
       - npm i -g zcatalyst-cli@beta
       - catalyst --version
       - catalyst deploy --project 27833000000008058 --org 862569740 --token m_1004.f7c1029d8034ad5a819592479ee58de7.41199573461f2037ea672999cc82e0e8
-  test_build:
-    artifacts:
-      upload:
-        - type: zip
-          regex:
-            - /catalyst/**
-          name: build
-          location: stratus://netlify-builds/
-    runner: Machine
-    image: image
-    cwd: /catalyst/
-    steps:
-      - echo `ls`
-      - echo `pwd`
-      - echo `cd catalyst && ls`
 stages:
-  - name: build
-    jobs:
-      - Deploy_Client_Functions
-  - name: deploy
-    jobs:
-      - Deployment_Approval
   - name: Deployment
     jobs:
       - Deployment
-  - name: test_build
-    jobs:
-      - test_build
