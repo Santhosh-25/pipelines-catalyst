@@ -15,10 +15,21 @@ jobs:
     steps:
       - ls
       - pwd
-      - npm i -g zcatalyst-cli@beta
+      - npm i -g zcatalyst-cli@latest
       - catalyst --version
-      - catalyst deploy --project 27833000000008058 --org 862569740 --token m_1004.f7c1029d8034ad5a819592479ee58de7.41199573461f2037ea672999cc82e0e8
+      - catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.f7c1029d8034ad5a819592479ee58de7.41199573461f2037ea672999cc82e0e8
+
+  AppsailDeployment:
+    runner: Machine
+    image: image
+    steps:
+      - ls
+      - pwd
+      - npm i -g zcatalyst-cli@latest
+      - catalyst --version
+      - catalyst deploy --project 27833000000008058 --org 862569740 --only appsail --token m_1004.f7c1029d8034ad5a819592479ee58de7.41199573461f2037ea672999cc82e0e8
 stages:
   - name: Deployment
     jobs:
       - Deployment
+      - AppsailDeployment
