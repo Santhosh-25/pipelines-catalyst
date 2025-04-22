@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "targets": [
+      "pipeline_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "appsail": [
+    {
+      "source": ".",
+      "name": "pipelineAppsail"
+    }
+  ]
+}

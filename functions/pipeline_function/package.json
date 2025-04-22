@@ -1,0 +1,10 @@
+{
+	"name": "pipeline_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "santhosh.mahendiran+us@zohotest.com",
+	"dependencies": {
+		"express": "^5.1.0",
+		"zcatalyst-sdk-node": "beta"
+	}
+}
