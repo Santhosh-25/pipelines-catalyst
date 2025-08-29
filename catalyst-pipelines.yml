@@ -17,6 +17,9 @@ jobs:
       - pwd
       - npm i -g zcatalyst-cli@latest
       - catalyst --version
+      - cd functions/pipeline_function
+      - npm install --platform=linux --arch=x64
+      - cd ../..
       - echo `catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8`
       - catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8
 
@@ -28,9 +31,6 @@ jobs:
       - pwd
       - npm i -g zcatalyst-cli@latest
       - catalyst --version
-      - cd functions/pipeline_function
-      - npm install --platform=linux --arch=x64
-      - cd ../..
       - catalyst deploy --project 27833000000008058 --org 862569740 --only appsail --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8
 stages:
   - name: Deployment
