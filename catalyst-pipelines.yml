@@ -20,8 +20,8 @@ jobs:
       - cd functions/pipeline_function
       - npm install --platform=linux --arch=x64
       - cd ../..
-      - echo `catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8`
-      - catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.b567de6517c815989b488a4fb29b756d.da26fbfc659500fe2041b496c932e8d8
+      - echo `catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.af2a065472259ebceabb987ff97f77f7.5da80c8b3eecc12b25b41b95c3d9d5ef`
+      - catalyst deploy --project 27833000000008058 --org 862569740 --only functions --token m_1004.af2a065472259ebceabb987ff97f77f7.5da80c8b3eecc12b25b41b95c3d9d5ef
 
   AppsailDeployment:
     runner: Machine
