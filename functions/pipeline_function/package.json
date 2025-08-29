@@ -4,7 +4,11 @@
 	"main": "index.js",
 	"author": "santhosh.mahendiran+us@zohotest.com",
 	"dependencies": {
-		"express": "^5.1.0",
-		"zcatalyst-sdk-node": "beta"
+    "@resvg/resvg-js": "^2.6.2",
+    "canvas": "^3.2.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "zcatalyst-sdk-node": "latest"
+		
 	}
 }
