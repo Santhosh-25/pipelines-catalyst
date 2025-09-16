@@ -8,7 +8,7 @@
     "canvas": "^3.2.0",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
-    "zcatalyst-sdk-node": "latest"
-		
+    "zcatalyst-sdk-node": "latest",
+		"qrcode": "1.5.4
 	}
 }
