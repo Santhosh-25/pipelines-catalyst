@@ -101,4 +101,39 @@ app.get("/svgpng", async (req, res) => {
   }
 });
 
+app.get("/pixman", async(req, res) => {
+  try{
+async function generateQrCode(text) {
+  const size = 300;
+  const canvas = createCanvas(size, size);
+  const ctx = canvas.getContext("2d");
+
+  // White background
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(0, 0, size, size);
+
+  // Render QR code onto the canvas
+  await QRCode.toCanvas(canvas, text, {
+    width: size,
+    margin: 2,
+    color: {
+      dark: "#000000",
+      light: "#ffffff",
+    },
+  });
+
+  // Save PNG
+  const buffer = canvas.toBuffer("image/png");
+  fs.writeFileSync("qrcode.png", buffer);
+
+  console.log("✅ QR code saved as qrcode.png");
+}
+generateQrCode("https://example.com").catch(console.error);
+
+  
+}catch(err){
+  console.log("error :", err);
+}
+});
+
 module.exports = app;
