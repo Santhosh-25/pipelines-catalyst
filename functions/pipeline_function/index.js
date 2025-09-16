@@ -2,6 +2,9 @@
 const express = require("express");
 const app = express();
 const catalyst = require("zcatalyst-sdk-node");
+const { createCanvas } = require("canvas");
+const QRCode = require("qrcode");
+const fs = require("fs");
 
 app.get("/imageConversion", async (req, res) => {
   const catalystApp = catalyst.initialize(req);
